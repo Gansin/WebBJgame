@@ -1,0 +1,27 @@
+<h1>Blackjack Webstyle</h1>
+
+<p>Welcome <%= session[:player_name] %>.</p>
+
+Dealer's cards:
+<ul>
+	<% session[:dealercards].each do |card| %>
+    <l1><%= card.to_s %></l1>
+  <% end %>
+
+ </ul>
+
+Total is <l1><%= calculate_total(session[:dealercards]) %></l1>
+<br/>
+<br/>
+<br/>
+
+
+
+ Your cards:
+ <ul>
+  <% session[:p_cards].each do |card| %>
+    <l1><%= card.to_s %></l1>
+  <% end %>
+
+</ul>
+Total is <l1><%= calculate_total(session[:p_cards]) %></l1>
